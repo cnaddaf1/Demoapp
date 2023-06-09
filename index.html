@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo</title>
+    <style>
+        body {
+            background-image: url('images/3209792.jpg');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 250px;
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        @media (max-width: 480px) {
+            form {
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Insert Data</h1>
+    <form action="insert.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required><br><br>
+        <label for="fname">Last Name:</label>
+        <input type="text" name="fname" id="fname" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h1>Fetch Data</h1>
+    <form action="fetch.php" method="POST">
+        <label for="id">Enter ID:</label>
+        <input type="text" name="id" id="id" required><br><br>
+        <input type="submit" value="Fetch">
+    </form>
+</body>
+</html>
